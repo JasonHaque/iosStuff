@@ -1,7 +1,7 @@
 import UIKit
 
 func sayHello(name:String){
-    print("Hello  "+name)
+    print("Hello  \(name) ")
 }
 func addIt(num1:Int,num2:Int)->Int{
     return num1+num2
