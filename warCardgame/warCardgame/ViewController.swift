@@ -9,7 +9,8 @@
 import UIKit
 
 class ViewController: UIViewController {
-
+    var playerScore = 0
+    var cpuScore = 0
     @IBOutlet weak var LeftCardView: UIImageView!
     
     @IBOutlet weak var RightCardView: UIImageView!
@@ -28,6 +29,14 @@ class ViewController: UIViewController {
         var rightcard = Int.random(in: 2...14)
         LeftCardView.image=UIImage(named: "card\(leftcard)")
         RightCardView.image=UIImage(named: "card\(rightcard)")
+        if(leftcard>rightcard){
+            playerScore += 1
+            PlayerScoreLabel.text=String(playerScore)
+        }
+        else if rightcard>leftcard {
+            cpuScore += 1
+            CpuScoreLabel.text=String(cpuScore)
+        }
     }
     
 }
