@@ -18,6 +18,8 @@ class ViewController: UIViewController {
     @IBOutlet weak var PlayerScoreLabel: UILabel!
     
     @IBOutlet weak var CpuScoreLabel: UILabel!
+    
+    @IBOutlet weak var Winnerlabel: UILabel!
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view.
@@ -25,8 +27,11 @@ class ViewController: UIViewController {
     
     
     @IBAction func dealTapped(_ sender: Any) {
-        var leftcard = Int.random(in: 2...14)
-        var rightcard = Int.random(in: 2...14)
+        if(playerScore>=20 || cpuScore>=20){
+            return
+        }
+        let leftcard = Int.random(in: 2...14)
+        let rightcard = Int.random(in: 2...14)
         LeftCardView.image=UIImage(named: "card\(leftcard)")
         RightCardView.image=UIImage(named: "card\(rightcard)")
         if(leftcard>rightcard){
@@ -36,6 +41,12 @@ class ViewController: UIViewController {
         else if rightcard>leftcard {
             cpuScore += 1
             CpuScoreLabel.text=String(cpuScore)
+        }
+        if(playerScore >= 20){
+            Winnerlabel.text = "Player Wins"
+        }
+        else if(cpuScore >= 20){
+            Winnerlabel.text = "Cpu Wins"
         }
     }
     

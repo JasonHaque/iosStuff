@@ -112,6 +112,13 @@
                                     </button>
                                 </subviews>
                             </stackView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="aDh-oS-a72">
+                                <rect key="frame" x="126" y="691" width="159" height="40"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="25"/>
+                                <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                         </subviews>
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                         <constraints>
@@ -141,11 +148,12 @@
                         <outlet property="LeftCardView" destination="trU-BT-Yav" id="YGu-GQ-jPk"/>
                         <outlet property="PlayerScoreLabel" destination="zxZ-F3-G3k" id="NpQ-nz-8hl"/>
                         <outlet property="RightCardView" destination="m2I-UZ-Ugr" id="HLy-hD-d4h"/>
+                        <outlet property="Winnerlabel" destination="aDh-oS-a72" id="Wcp-eO-Hfz"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="136.80000000000001" y="116.00985221674877"/>
+            <point key="canvasLocation" x="136.23188405797103" y="115.84821428571428"/>
         </scene>
     </scenes>
     <resources>
